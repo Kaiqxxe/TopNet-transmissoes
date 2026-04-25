@@ -21,11 +21,11 @@ export const competicoes: Competicao[] = [
     cor2: '#003087',
     lives: [
       {
-        titulo: 'Semifinal 2024 - Grêmio x Inter',
+        titulo: 'Final 2025 - Lind Água x CDMI',
         url: 'https://www.youtube.com/watch?v=OkgqTkJ0Br8',
       },
       {
-        titulo: 'Final 2023 - Melhores Momentos',
+        titulo: 'Final 2024 - Melhores Momentos',
         url: 'https://www.youtube.com/watch?v=OkgqTkJ0Br8',
       },
     ],

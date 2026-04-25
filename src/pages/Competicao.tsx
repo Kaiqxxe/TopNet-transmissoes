@@ -7,7 +7,7 @@ import GlowButton from '../components/GlowButton'
 import VideoCard from '../components/VideoCard'
 import styles from './Competicao.module.css'
 
-const WHATSAPP_NUMBER = '5551999999999'
+const WHATSAPP_NUMBER = '5569999517161'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
