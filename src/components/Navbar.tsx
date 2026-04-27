@@ -1,9 +1,19 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
   const location = useLocation()
+  const navigate = useNavigate()
+
+  function scrollTo(id: string) {
+    if (location.pathname === '/') {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/')
+      setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 100)
+    }
+  }
 
   return (
     <motion.nav
@@ -26,13 +36,13 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <a href="/#sobre">Sobre nós</a>
+          <a onClick={() => scrollTo('sobre')} style={{ cursor: 'pointer' }}>Sobre nós</a>
         </li>
         <li>
-          <a href="/#competicoes">Competições</a>
+          <a onClick={() => scrollTo('competicoes')} style={{ cursor: 'pointer' }}>Competições</a>
         </li>
         <li>
-          <a href="/#galeria">Galeria</a>
+          <a onClick={() => scrollTo('galeria')} style={{ cursor: 'pointer' }}>Galeria</a>
         </li>
       </ul>
     </motion.nav>

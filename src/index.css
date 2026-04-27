@@ -10,9 +10,13 @@ body {
   margin: 0;
   background: #000;
   color: #fff;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p, span, small, label, .meta, .desc, .livesDesc, .badge {
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
 }
 
 #root {

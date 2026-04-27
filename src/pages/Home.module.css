@@ -199,6 +199,8 @@ section h2 {
   overflow: hidden;
   text-align: left;
   transition: border-color 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .compCard:hover {
@@ -237,7 +239,8 @@ section h2 {
 .compCard p {
   font-size: 14px;
   color: rgba(255,255,255,0.4);
-  margin: 0 0 24px;
+  margin: 0;
+  flex: 1;
 }
 
 .compCta {
@@ -245,6 +248,7 @@ section h2 {
   font-weight: 600;
   color: rgba(255,255,255,0.6);
   transition: color 0.2s;
+  margin-top: 24px;
 }
 
 .compCard:hover .compCta {
