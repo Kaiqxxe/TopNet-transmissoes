@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaWhatsapp, FaPlay, FaTrophy, FaUsers, FaBroadcastTower } from 'react-icons/fa'
+import { GiSoccerBall } from 'react-icons/gi'
 import GlowButton from '../components/GlowButton'
 import VideoCard from '../components/VideoCard'
 import { competicoes } from '../data/competicoes'
@@ -47,7 +48,7 @@ export default function Home() {
           />
 
           <motion.p className={styles.heroDesc} variants={fadeUp} custom={2}>
-            Levamos a emoção do futebol gaúcho para todo o Brasil com transmissões
+            Levamos a emoção do futebol para todo o Brasil com transmissões
             profissionais, cobertura completa e qualidade de ponta.
           </motion.p>
 
@@ -98,7 +99,7 @@ export default function Home() {
 
           <motion.div className={styles.sobreCards} variants={fadeUp} custom={1}>
             <div className={styles.card}>
-              <FaTrophy size={28} />
+              <GiSoccerBall size={28} />
               <strong>+450</strong>
               <span>Jogos transmitidos</span>
             </div>
@@ -109,7 +110,7 @@ export default function Home() {
             </div>
             <div className={styles.card}>
               <FaUsers size={28} />
-              <strong>+40k</strong>
+              <strong>+800k</strong>
               <span>Espectadores únicos</span>
             </div>
             <div className={styles.card}>
