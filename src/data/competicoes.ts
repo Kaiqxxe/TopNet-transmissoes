@@ -21,12 +21,12 @@ export const competicoes: Competicao[] = [
     cor2: '#003087',
     lives: [
       {
-        titulo: 'Final 2025 - Lind Água x CDMI',
-        url: 'https://www.youtube.com/watch?v=OkgqTkJ0Br8',
+        titulo: '[FINAL] PRIMOS F.C. (VILHENA) X DESTAK / PUMAS (JI-PARANÁ) | 4ª COPA REGIONAL SOCIETY',
+        url: 'https://www.youtube.com/watch?v=ReAR4-i8PwU',
       },
       {
-        titulo: 'Final 2024 - Melhores Momentos',
-        url: 'https://www.youtube.com/watch?v=OkgqTkJ0Br8',
+        titulo: 'PRIMOS F.C. (VILHENA) X CDMI F.C. (PIMENTA BUENO) | 4ª COPA REGIONAL SOCIETY',
+        url: 'https://www.youtube.com/watch?v=FVHruymGpOc',
       },
     ],
   },

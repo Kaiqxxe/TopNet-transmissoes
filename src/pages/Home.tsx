@@ -20,10 +20,12 @@ const fadeUp = {
 }
 
 const galeria = [
-  { titulo: 'Final Copa da Liga Regional 2025', url: 'https://www.youtube.com/watch?v=OkgqTkJ0Br8' },
-  { titulo: 'Copa RS - Semifinal', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-  { titulo: 'Liga Gaúcha - Grande Final', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-  { titulo: 'Clássico Gaúcho 2023', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+  { titulo: '[GRANDE FINAL] GUAPORÉ F.C. X RONDONIENSE | CAMPEONATO RONDONIENSE SICRED 2026', url: 'https://www.youtube.com/watch?v=7OT_eJ7IUHc&t=9293s' },
+  { titulo: 'Copa do Brasil de Futsal 2024 | Deportivo x Fortaleza | 3ª Fase | Jogo Ida | Ao vivo', url: 'https://www.youtube.com/watch?v=D5yby4UBUNU' },
+  { titulo: 'GUAPORÉ F.C. X TREM D.C./AP | COPA NORTE 2026', url: 'https://www.youtube.com/watch?v=e0pThK8iXWI&t=1789s8' },
+  { titulo: 'Rodada de Abertura - GUAPORÉ F.C. X INDEPENDÊNCIA/AC', url: 'https://www.youtube.com/watch?v=uziYLV4IIws&t=3126s' },
+  { titulo: 'GUAPORÉ F.C. X HUMAITÁ/AC | BRASILEIRÃO SÉRIE D 2026', url: 'https://www.youtube.com/watch?v=kX_horATlfc&t=7289s' },
+  { titulo: 'PRIMOS F.C. (VILHENA) X DESTAK / PUMAS (JI-PARANÁ) | 4ª COPA REGIONAL SOCIETY', url: 'https://www.youtube.com/watch?v=ReAR4-i8PwU' },
 ]
 
 export default function Home() {

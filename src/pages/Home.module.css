@@ -267,7 +267,12 @@ section h2 {
 .galeriaGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 1fr;
   gap: 24px;
+}
+
+.galeriaGrid > * {
+  height: 100%;
 }
 
 .videoCard {
