@@ -13,6 +13,24 @@ function extractYouTubeId(url: string): string | null {
   return null
 }
 
+function extractStartSeconds(url: string): number {
+  // formato &t=1h30m20s ou &t=3600
+  const match = url.match(/[?&]t=([\w]+)/)
+  if (!match) return 0
+  const raw = match[1]
+  // já é número puro
+  if (/^\d+$/.test(raw)) return parseInt(raw)
+  // formato XhYmZs
+  let seconds = 0
+  const h = raw.match(/(\d+)h/)
+  const m = raw.match(/(\d+)m/)
+  const s = raw.match(/(\d+)s/)
+  if (h) seconds += parseInt(h[1]) * 3600
+  if (m) seconds += parseInt(m[1]) * 60
+  if (s) seconds += parseInt(s[1])
+  return seconds
+}
+
 interface VideoCardProps {
   url: string
   titulo: string
@@ -32,7 +50,8 @@ export default function VideoCard({ url, titulo }: VideoCardProps) {
   }
 
   const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`
+  const start = extractStartSeconds(url)
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1${start ? `&start=${start}` : ''}`
 
   return (
     <div className={styles.card}>

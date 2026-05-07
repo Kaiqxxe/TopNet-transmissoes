@@ -34,7 +34,7 @@ export const competicoes: Competicao[] = [
     id: 'campeonato rondoniense',
     nome: 'Campeonato Rondoniense',
     descricao:
-      'O Campeonato Rondoniense é uma competição regional que valoriza os clubes do estado de Rondõnia, promovendo o futebol em todas as regiões do estado.',
+      'O Campeonato Rondoniense é uma competição regional que valoriza os clubes do estado de Rondônia, promovendo o futebol em todas as regiões do estado.',
     edicoes: '2026',
     times: '16 clubes participantes',
     cor1: '#276901',
@@ -42,11 +42,11 @@ export const competicoes: Competicao[] = [
     lives: [
       {
         titulo: '[GRANDE FINAL] GUAPORÉ F.C. X RONDONIENSE | CAMPEONATO RONDONIENSE SICRED 2026',
-        url: 'https://www.youtube.com/watch?v=7OT_eJ7IUHc&t=9293s',
+        url: 'https://www.youtube.com/watch?v=7OT_eJ7IUHc&t=2h47m57s',
       },
       {
         titulo: '[SEMI FINAL] GUAPORÉ F.C. X GAZIN PORTO VELHO | CAMPEONATO RONDONIENSE SICRED 2026',
-        url: 'https://www.youtube.com/watch?v=RU-vlmoXzR0&t=6184s',
+        url: 'https://www.youtube.com/watch?v=RU-vlmoXzR0&t=1h09m57s',
       },
     ],
   },
@@ -146,6 +146,6 @@ export const competicoes: Competicao[] = [
       },
     ],
   }
-  
+
 
 ]
