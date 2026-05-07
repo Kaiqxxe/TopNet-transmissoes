@@ -70,7 +70,13 @@ export default function Competicao() {
             animate="visible"
           >
             <motion.div className={styles.badge} variants={fadeUp} custom={0}>
-              <FaTrophy size={13} />
+              <motion.span
+                animate={{ rotate: [0, -15, 15, -10, 10, 0] }}
+                transition={{ duration: 1.2, delay: 0.6, ease: 'easeInOut' }}
+                style={{ display: 'flex' }}
+              >
+                <FaTrophy size={13} />
+              </motion.span>
               Competição transmitida
             </motion.div>
 

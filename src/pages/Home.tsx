@@ -1,11 +1,59 @@
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useRef, useEffect, useState } from 'react'
 import { FaWhatsapp, FaPlay, FaTrophy, FaUsers, FaBroadcastTower } from 'react-icons/fa'
 import { GiSoccerBall } from 'react-icons/gi'
 import GlowButton from '../components/GlowButton'
 import VideoCard from '../components/VideoCard'
 import { competicoes } from '../data/competicoes'
 import styles from './Home.module.css'
+
+function useCountUp(target: number, duration = 1800) {
+  const [count, setCount] = useState(0)
+  const ref = useRef<HTMLDivElement>(null)
+  const started = useRef(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true
+          const start = performance.now()
+          const tick = (now: number) => {
+            const progress = Math.min((now - start) / duration, 1)
+            setCount(Math.floor(progress * target))
+            if (progress < 1) requestAnimationFrame(tick)
+            else setCount(target)
+          }
+          requestAnimationFrame(tick)
+        }
+      },
+      { threshold: 0.5 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [target, duration])
+
+  return { ref, count }
+}
+
+function StatCard({ icon, value, suffix = '', label }: {
+  icon: React.ReactNode
+  value: number
+  suffix?: string
+  label: string
+}) {
+  const { ref, count } = useCountUp(value)
+  return (
+    <div className={styles.card} ref={ref}>
+      {icon}
+      <strong>+{count}{suffix}</strong>
+      <span>{label}</span>
+    </div>
+  )
+}
 
 const WHATSAPP_NUMBER = '556999517161'
 const WHATSAPP_MSG = encodeURIComponent('Olá! Gostaria de saber mais sobre as transmissões da TopNet.')
@@ -100,21 +148,13 @@ export default function Home() {
           </motion.div>
 
           <motion.div className={styles.sobreCards} variants={fadeUp} custom={1}>
-            <div className={styles.card}>
-              <GiSoccerBall size={28} />
-              <strong>+450</strong>
-              <span>Jogos transmitidos</span>
-            </div>
+            <StatCard icon={<GiSoccerBall size={28} />} value={450} label="Jogos transmitidos" />
             <div className={styles.card}>
               <FaBroadcastTower size={28} />
               <strong>+8</strong>
               <span>Competições cobertas</span>
             </div>
-            <div className={styles.card}>
-              <FaUsers size={28} />
-              <strong>+800k</strong>
-              <span>Espectadores únicos</span>
-            </div>
+            <StatCard icon={<FaUsers size={28} />} value={800} suffix="k" label="Espectadores únicos" />
             <div className={styles.card}>
               <FaPlay size={28} />
               <strong>HD</strong>
